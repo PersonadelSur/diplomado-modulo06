@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glosario y Recursos — Módulo 6</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Módulo 6 <span class="dim">| Experimentación, IA y Validación de Producto</span></a>
+    <div class="nav-links">
+      <a href="guia-workshop.html">Guía Workshop</a>
+      <a href="framework-experimentos.html">Framework de Experimentos</a>
+      <a href="stack-herramientas.html">Stack de Herramientas</a>
+      <a href="diverger-converger.html">Diverger · Converger</a>
+      <a href="capas-ia.html">Capas de IA Integradas</a>
+      <a href="recursos.html">Glosario y Recursos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Módulo 6 <span class="sep">·</span> Experimentación, IA y Validación de Producto</div>
+    <h1 class="display">Glosario y Recursos</h1>
+    <p class="lede">Términos clave · Priorización · Tips IA · Libros · Lecturas · Podcasts</p>
+    <span class="piece-tag">Recurso anexo</span>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <div class="glossary-toolbar">
+      <div class="search-box">
+        <span>⌕</span>
+        <input type="text" id="glossary-search" placeholder="Buscar término, sesgo, métrica...">
+      </div>
+    </div>
+    <div class="glossary-toolbar">
+      <span class="filter-chip active" data-cat="todo">◈ Todo</span>
+      <span class="filter-chip" data-cat="glosario">📖 Glosario 20</span>
+      <span class="filter-chip" data-cat="priorizacion">🎯 Priorización 3</span>
+      <span class="filter-chip" data-cat="tips">⚡ Tips IA 9</span>
+      <span class="filter-chip" data-cat="libros">📚 Libros 8</span>
+      <span class="filter-chip" data-cat="lecturas">📰 Lecturas 5</span>
+      <span class="filter-chip" data-cat="podcasts">🎙️ Podcasts 4</span>
+    </div>
+
+    <div id="no-results" class="no-results">No se encontraron resultados para tu búsqueda.</div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:28px 0 14px;">Metodología de Experimentación</h3>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-head">
+        <div><span class="glossary-term">Continuous Discovery</span> <span class="glossary-en">Continuous Discovery Habits</span></div>
+        <span class="glossary-cat">Metodología</span>
+      </div>
+      <div class="glossary-body">Práctica de investigar y validar con usuarios **al menos semanalmente**, en lugar de hacerlo en sprints aislados. Conecta discovery y delivery en un ciclo continuo — la experimentación deja de ser un evento y pasa a ser un hábito del equipo.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-head">
+        <div><span class="glossary-term">Lean Experimentation</span> <span class="glossary-en">Build-Measure-Learn</span></div>
+        <span class="glossary-cat">Metodología</span>
+      </div>
+      <div class="glossary-body">Ciclo de **Construir → Medir → Aprender** de Eric Ries. Cada vuelta al ciclo debe ser lo más rápida y barata posible — el objetivo no es construir rápido, es **aprender** rápido.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Assumption Mapping</div>
+      <span class="glossary-cat" style="float:right;">Metodología</span>
+      <div class="glossary-body">Técnica que descompone una idea de producto en sus **supuestos de deseabilidad, viabilidad y factibilidad**, y los ubica en una matriz de importancia vs. incertidumbre para decidir qué validar primero.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Pirámide de Evidencia</div>
+      <span class="glossary-cat" style="float:right;">Metodología</span>
+      <div class="glossary-body">Jerarquía de validación que va de menor a mayor certeza: **Problema → Usuario → Solución → Modelo de negocio → Crecimiento**. Cada nivel requiere más evidencia y mayor inversión que el anterior.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Experiment Backlog</div>
+      <span class="glossary-cat" style="float:right;">Metodología</span>
+      <div class="glossary-body">Lista viva y priorizada de todos los experimentos que un equipo planea, ejecuta y documenta. Cada línea incluye hipótesis, método, métrica y decisión — es la memoria institucional de lo que el equipo ha aprendido.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Persevere / Pivot / Kill</div>
+      <span class="glossary-cat" style="float:right;">Metodología</span>
+      <div class="glossary-body">Las tres decisiones posibles tras un experimento: **Persevere** (continuar en la misma dirección), **Pivot** (cambiar de dirección manteniendo el aprendizaje) o **Kill** (descartar la idea). Definir el umbral de cada una antes de ver resultados evita racionalizar después.</div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:28px 0 14px;">Tipos de Experimento</h3>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Fake Door Test</div>
+      <span class="glossary-cat" style="float:right;">Experimento</span>
+      <div class="glossary-body">Se publica una **funcionalidad que aún no existe** (botón, landing, anuncio) para medir cuántos usuarios intentan usarla. Mide interés real antes de construir nada.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Smoke Test</div>
+      <span class="glossary-cat" style="float:right;">Experimento</span>
+      <div class="glossary-body">Variante del Fake Door orientada a **medir intención de compra**: landing con precio y CTA de "comprar" o "reservar" antes de que el producto exista.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Concierge MVP</div>
+      <span class="glossary-cat" style="float:right;">Experimento</span>
+      <div class="glossary-body">El equipo **entrega el servicio manualmente**, de forma transparente para el usuario, en lugar de automatizarlo. Valida la propuesta de valor antes de invertir en tecnología.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Wizard of Oz</div>
+      <span class="glossary-cat" style="float:right;">Experimento</span>
+      <div class="glossary-body">El usuario interactúa con una **interfaz que parece automatizada**, pero detrás hay una persona ejecutando el proceso manualmente. A diferencia del Concierge MVP, el usuario no sabe que es manual.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">A/B Testing</div>
+      <span class="glossary-cat" style="float:right;">Experimento</span>
+      <div class="glossary-body">Comparación estadística entre dos o más variantes de un producto para medir cuál genera mejor resultado en una métrica definida. Requiere volumen de usuarios suficiente para ser significativo.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Synthetic Users</div>
+      <span class="glossary-cat" style="float:right;">IA</span>
+      <div class="glossary-body">Perfiles de usuario **generados por IA** para simular respuestas o comportamientos antes de una validación real. Útiles como piloto rápido, pero no reemplazan la evidencia con usuarios reales — su mayor riesgo es la falsa confianza.</div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:28px 0 14px;">Métricas de Experimentación y Decisión</h3>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Leading Indicator</div>
+      <span class="glossary-cat" style="float:right;">Métrica</span>
+      <div class="glossary-body">Métrica **adelantada** que predice un resultado futuro (ej. demos agendadas predice ventas). Permite actuar antes de que el problema se cristalice en el resultado final.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Lagging Indicator</div>
+      <span class="glossary-cat" style="float:right;">Métrica</span>
+      <div class="glossary-body">Métrica **rezagada** que confirma un resultado ya ocurrido (ej. ingresos mensuales). Los lag confirman el impacto; los lead permiten anticiparlo.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Criterio de Éxito</div>
+      <span class="glossary-cat" style="float:right;">Métrica</span>
+      <div class="glossary-body">Umbral numérico definido **antes de ejecutar** el experimento que determina si la hipótesis se considera validada, invalidada o inconclusa.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Product Analytics</div>
+      <span class="glossary-cat" style="float:right;">Métrica</span>
+      <div class="glossary-body">Disciplina de instrumentar el producto para medir comportamiento de uso real (funnels, cohortes, retención) y usar esos datos como insumo directo del Experiment Backlog.</div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:28px 0 14px;">Inteligencia Artificial en Experimentación</h3>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Experimentation Playbook</div>
+      <span class="glossary-cat" style="float:right;">IA</span>
+      <div class="glossary-body">Documento vivo que estandariza cómo el equipo diseña, ejecuta y documenta experimentos — incluye plantillas, umbrales de decisión y el rol de la IA en cada etapa del pipeline.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">IA como Copiloto del PM</div>
+      <span class="glossary-cat" style="float:right;">IA</span>
+      <div class="glossary-body">Enfoque donde la IA acelera el diseño, ejecución y síntesis de experimentos, pero el **criterio de priorización y la decisión final siguen siendo humanos**.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Prompt Engineering aplicado a PM</div>
+      <span class="glossary-cat" style="float:right;">IA</span>
+      <div class="glossary-body">Práctica de estructurar instrucciones a modelos de IA con rol, contexto, intención y formato para obtener outputs directamente accionables en tareas de producto.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="glosario">
+      <div class="glossary-term">Cultura de Experimentación</div>
+      <span class="glossary-cat" style="float:right;">Negocio</span>
+      <div class="glossary-body">Ambiente organizacional donde probar hipótesis con evidencia — y aceptar resultados negativos como aprendizaje válido — está normalizado y incentivado en lugar de penalizado.</div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:28px 0 14px;">Metodologías de Priorización</h3>
+
+    <div class="glossary-item" data-cat="priorizacion">
+      <div class="glossary-head">
+        <div><span class="glossary-term">Matriz Importancia × Incertidumbre</span></div>
+        <span class="glossary-cat">Priorización</span>
+      </div>
+      <div class="glossary-body">Cuadrante 2×2 que ubica cada supuesto según **qué tan crítico es para el éxito** (eje Y) y **qué tanto se sabe de él** (eje X). El cuadrante de alta importancia y alta incertidumbre se valida primero.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="priorizacion">
+      <div class="glossary-head">
+        <div><span class="glossary-term">RICE</span> <span class="glossary-en">Reach · Impact · Confidence · Effort</span></div>
+        <span class="glossary-cat">Priorización</span>
+      </div>
+      <div class="glossary-body">Framework de scoring: **(Reach × Impact × Confidence) ÷ Effort**. Aplicado a experimentación, ayuda a priorizar qué experimento ejecutar primero cuando hay múltiples supuestos igual de importantes.</div>
+    </div>
+
+    <div class="glossary-item" data-cat="priorizacion">
+      <div class="glossary-head">
+        <div><span class="glossary-term">Costo vs. Fuerza de Evidencia</span></div>
+        <span class="glossary-cat">Priorización</span>
+      </div>
+      <div class="glossary-body">Matriz que compara el **costo de implementación** de un experimento contra la **fuerza de la evidencia** que genera. El objetivo es maximizar evidencia al menor costo posible antes de escalar inversión.</div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:28px 0 14px;">Tips para experimentar con Inteligencia Artificial</h3>
+
+    <div class="grid cols-3">
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">🎯</span>
+        <div class="tip-num">Tip 01</div>
+        <h4>Define el criterio de éxito antes de preguntarle a la IA</h4>
+        <p>No le pidas a la IA que interprete resultados sin haber fijado el umbral de éxito de antemano — evita que la IA (y tú) racionalicen el resultado después de verlo.</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">🔬</span>
+        <div class="tip-num">Tip 02</div>
+        <h4>Un chat = un experimento</h4>
+        <p>Cada experimento merece su propio hilo de conversación. Mezclar el análisis de varios experimentos en un solo chat degrada la calidad del razonamiento.</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">🔄</span>
+        <div class="tip-num">Tip 03</div>
+        <h4>Si el experimento generado no convence, pide el extremo opuesto</h4>
+        <p>Pide a la IA la versión más barata y la más costosa del mismo experimento. Comparar los extremos revela el punto medio óptimo más rápido que iterar sobre una sola versión.</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">🎭</span>
+        <div class="tip-num">Tip 04</div>
+        <h4>Dale un rol de escéptico a la IA</h4>
+        <p>"Actúa como un investigador escéptico que busca fallas en el diseño de este experimento" genera mejores críticas que pedir directamente "revisa este experimento".</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">📋</span>
+        <div class="tip-num">Tip 05</div>
+        <h4>Especifica el formato del Experiment Backlog</h4>
+        <p>Pide siempre la misma estructura de columnas (Hipótesis | Experimento | Métrica | Decisión) para que el backlog sea comparable entre sesiones y entre miembros del equipo.</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">👥</span>
+        <div class="tip-num">Tip 06</div>
+        <h4>Declara si el resultado es para el squad o para el comité</h4>
+        <p>La IA ajusta automáticamente el rigor estadístico y el lenguaje según si el resultado se usa internamente o se presenta a un comité ejecutivo.</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">📎</span>
+        <div class="tip-num">Tip 07</div>
+        <h4>Sube los datos reales del experimento, no un resumen</h4>
+        <p>La IA analizando datos crudos (respuestas de Typeform, eventos de analytics) es más útil que la IA interpretando un resumen que ya perdió matices.</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">🧠</span>
+        <div class="tip-num">Tip 08</div>
+        <h4>La IA sugiere el pipeline, tú decides los umbrales</h4>
+        <p>Usa la IA para diseñar el flujo de automatización (qué herramienta hace qué), pero los umbrales de decisión (Persevere/Pivot/Kill) siempre deben ser un acuerdo humano explícito del equipo.</p>
+      </div>
+      <div class="tip-card glossary-item" data-cat="tips">
+        <span class="tip-emoji">🚫</span>
+        <div class="tip-num">Tip 09</div>
+        <h4>Dile a la IA qué sesgos evitar explícitamente</h4>
+        <p>"No asumas que el resultado confirma la hipótesis inicial", "no ignores el segmento con menor volumen" — las restricciones negativas reducen el sesgo de confirmación en el análisis de resultados.</p>
+      </div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:32px 0 14px;">Libros — Experimentación y Validación</h3>
+    <div class="grid cols-2">
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">🚀</span>
+        <div>
+          <div class="res-index">Libro 01</div>
+          <div class="res-title">The Lean Startup</div>
+          <div class="res-sub">Eric Ries</div>
+          <div class="res-desc">El libro fundacional del ciclo Build-Measure-Learn y el concepto de MVP. Base conceptual de todo el módulo.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/10127019-the-lean-startup" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">🧪</span>
+        <div>
+          <div class="res-index">Libro 02</div>
+          <div class="res-title">Testing Business Ideas</div>
+          <div class="res-sub">David J. Bland &amp; Alexander Osterwalder</div>
+          <div class="res-desc">Catálogo práctico de más de 40 experimentos, incluyendo Fake Door, Smoke Test y Concierge MVP con guías paso a paso.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/44492718-testing-business-ideas" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">⚡</span>
+        <div>
+          <div class="res-index">Libro 03</div>
+          <div class="res-title">Sprint</div>
+          <div class="res-sub">Jake Knapp</div>
+          <div class="res-desc">Metodología de Google Ventures para prototipar y validar una idea con usuarios reales en 5 días. Complementa el diseño rápido de experimentos.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/25814544-sprint" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">🌱</span>
+        <div>
+          <div class="res-index">Libro 04</div>
+          <div class="res-title">Continuous Discovery Habits</div>
+          <div class="res-sub">Teresa Torres</div>
+          <div class="res-desc">El framework de OST visto en el Módulo 2, ahora como base de la validación continua semana a semana.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/58046715-continuous-discovery-habits" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">📊</span>
+        <div>
+          <div class="res-index">Libro 05</div>
+          <div class="res-title">Trustworthy Online Controlled Experiments</div>
+          <div class="res-sub">Ron Kohavi, Diane Tang &amp; Ya Xu</div>
+          <div class="res-desc">La referencia técnica de A/B Testing a escala, escrita por líderes de experimentación de Microsoft, Google y LinkedIn.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/54200073-trustworthy-online-controlled-experiments" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">🪝</span>
+        <div>
+          <div class="res-index">Libro 06</div>
+          <div class="res-title">Hooked</div>
+          <div class="res-sub">Nir Eyal</div>
+          <div class="res-desc">Modelo del "Hook" para diseñar hábitos de producto — útil al validar hipótesis de retención y activación.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/22668729-hooked" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">🧠</span>
+        <div>
+          <div class="res-index">Libro 07</div>
+          <div class="res-title">Pensar Rápido, Pensar Despacio</div>
+          <div class="res-sub">Daniel Kahneman</div>
+          <div class="res-desc">Base científica de los sesgos cognitivos que distorsionan el diseño y la lectura de experimentos, incluyendo el sesgo de confirmación.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/38228086-pensar-r-pido-pensar-despacio" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="libros">
+        <span class="res-emoji">📐</span>
+        <div>
+          <div class="res-index">Libro 08</div>
+          <div class="res-title">The Lean Product Playbook</div>
+          <div class="res-sub">Dan Olsen</div>
+          <div class="res-desc">Guía operativa para pasar de hipótesis a solución validada usando la Pirámide del Producto — puente directo con la Pirámide de Evidencia del módulo.</div>
+          <a class="res-link" href="https://www.goodreads.com/book/show/25374501-the-lean-product-playbook" target="_blank">Ver en Goodreads →</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:32px 0 14px;">Artículos y Lecturas Recomendadas</h3>
+    <div class="grid cols-2">
+      <div class="res-card glossary-item" data-cat="lecturas">
+        <span class="res-emoji">📝</span>
+        <div>
+          <div class="res-index">Blog · Reforge</div>
+          <div class="res-title">Growth &amp; Experimentation</div>
+          <div class="res-desc">Artículos técnicos sobre diseño de experimentos y cultura de experimentación en equipos de producto de alto crecimiento.</div>
+          <a class="res-link" href="https://www.reforge.com/blog" target="_blank">Leer →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="lecturas">
+        <span class="res-emoji">📝</span>
+        <div>
+          <div class="res-index">Blog · producttalk.org</div>
+          <div class="res-title">Product Talk</div>
+          <div class="res-desc">El blog de Teresa Torres. Conecta el discovery continuo del Módulo 2 con la experimentación rigurosa del Módulo 6.</div>
+          <a class="res-link" href="https://www.producttalk.org/blog/" target="_blank">Leer →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="lecturas">
+        <span class="res-emoji">📝</span>
+        <div>
+          <div class="res-index">Artículo · Harvard Business Review</div>
+          <div class="res-title">The Right Way to Build Your Brand</div>
+          <div class="res-desc">Perspectiva ejecutiva sobre por qué las decisiones de producto basadas en evidencia superan a las basadas en intuición jerárquica (HiPPO).</div>
+          <a class="res-link" href="https://hbr.org/" target="_blank">Leer →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="lecturas">
+        <span class="res-emoji">📝</span>
+        <div>
+          <div class="res-index">Artículo · Investopedia</div>
+          <div class="res-title">Behavioral Economics — Introducción</div>
+          <div class="res-desc">Base conceptual de sesgos cognitivos que afectan la interpretación de resultados de experimentos.</div>
+          <a class="res-link" href="https://www.investopedia.com/terms/b/behavioraleconomics.asp" target="_blank">Leer →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="lecturas">
+        <span class="res-emoji">📝</span>
+        <div>
+          <div class="res-index">Artículo · Exp Platform (Microsoft)</div>
+          <div class="res-title">Guías de A/B Testing a Escala</div>
+          <div class="res-desc">Recursos técnicos del equipo de experimentación de Microsoft sobre diseño estadístico riguroso de A/B tests.</div>
+          <a class="res-link" href="https://exp-platform.com/" target="_blank">Leer →</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--plum);font-size:16px;margin:32px 0 14px;">Podcasts y Canales Recomendados</h3>
+    <div class="grid cols-2">
+      <div class="res-card glossary-item" data-cat="podcasts">
+        <span class="res-emoji">🎙️</span>
+        <div>
+          <div class="res-index">YouTube · Podcast semanal</div>
+          <div class="res-title">Lenny's Podcast</div>
+          <div class="res-sub">Entrevistas largas · inglés</div>
+          <div class="res-desc">Entrevistas con PMs y líderes de growth sobre cultura de experimentación en las mejores empresas tecnológicas.</div>
+          <a class="res-link" href="https://www.youtube.com/@LennysPodcast" target="_blank">Ver canal →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="podcasts">
+        <span class="res-emoji">🚀</span>
+        <div>
+          <div class="res-index">YouTube · Canal de growth</div>
+          <div class="res-title">Growth Rockstar</div>
+          <div class="res-sub">Videos cortos y entrevistas · inglés</div>
+          <div class="res-desc">Contenido especializado en experimentos de growth: métricas, retención y activación con enfoque data-driven.</div>
+          <a class="res-link" href="https://www.youtube.com/@growthrockstar" target="_blank">Ver canal →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="podcasts">
+        <span class="res-emoji">🎤</span>
+        <div>
+          <div class="res-index">YouTube · Canal de conferencias</div>
+          <div class="res-title">Mind the Product TV</div>
+          <div class="res-sub">Charlas de conferencia · inglés</div>
+          <div class="res-desc">Charlas internacionales sobre experimentación, A/B testing y cultura de producto basada en evidencia.</div>
+          <a class="res-link" href="https://www.youtube.com/c/MindtheProductTV" target="_blank">Ver canal →</a>
+        </div>
+      </div>
+      <div class="res-card glossary-item" data-cat="podcasts">
+        <span class="res-emoji">🎵</span>
+        <div>
+          <div class="res-index">Substack · Newsletter</div>
+          <div class="res-title">Product Rocks</div>
+          <div class="res-sub">Artículos semanales · español/inglés</div>
+          <div class="res-desc">Newsletter con casos de estudio de experimentación y estrategia relevantes para el contexto regional LATAM.</div>
+          <a class="res-link" href="https://substack.com/@productrocks" target="_blank">Ver en Substack →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Experimentación, IA y Validación de Producto</p>
+    <p>Módulo 6 · Diplomado de Producto · Glosario y Recursos</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

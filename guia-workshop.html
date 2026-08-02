@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía de Navegación — Plan de Experimentación · Módulo 6</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Módulo 6 <span class="dim">| Experimentación, IA y Validación de Producto</span></a>
+    <div class="nav-links">
+      <a href="guia-workshop.html">Guía Workshop</a>
+      <a href="framework-experimentos.html">Framework de Experimentos</a>
+      <a href="stack-herramientas.html">Stack de Herramientas</a>
+      <a href="diverger-converger.html">Diverger · Converger</a>
+      <a href="capas-ia.html">Capas de IA Integradas</a>
+      <a href="recursos.html">Glosario y Recursos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Módulo 6 <span class="sep">·</span> Experimentación, IA y Validación de Producto</div>
+    <h1 class="display">Guía de Navegación<br>del Plan de Experimentación</h1>
+    <p class="lede">Un documento de apoyo para construir el Plan de Experimentación y el Experiment Backlog del taller final. Úsalo antes de empezar y como referencia durante el ejercicio.</p>
+    <span class="piece-tag">Pieza 1 de 5 · Assumption Mapping + Experiment Design</span>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">01 · ¿Qué es el Assumption Map y por qué el orden importa?</h2>
+    <p class="section-sub">El Assumption Mapping evita el error más común en experimentación: probar la idea completa de una vez. El mapa te obliga a separar cada supuesto de la idea (deseabilidad, viabilidad, factibilidad), priorizar por riesgo e incertidumbre, y diseñar el experimento más barato que reduzca la incertidumbre del supuesto más crítico primero.</p>
+
+    <div class="phase-flow">
+      <div class="phase-card diverge">
+        <div class="phase-label">Supuesto</div>
+        <h4>Idea</h4>
+        <div class="phase-q">¿Qué queremos validar?</div>
+        <p class="phase-desc">La idea de producto o feature completa, sin descomponer todavía.</p>
+      </div>
+      <div class="phase-card converge">
+        <div class="phase-label">→</div>
+        <h4>Supuestos</h4>
+        <div class="phase-q">¿Qué tiene que ser cierto para que funcione?</div>
+        <p class="phase-desc">Desglose en supuestos de deseabilidad, viabilidad y factibilidad.</p>
+      </div>
+      <div class="phase-card diverge">
+        <div class="phase-label">→</div>
+        <h4>Riesgo</h4>
+        <div class="phase-q">¿Qué tan crítico e incierto es cada uno?</div>
+        <p class="phase-desc">Prioriza por eje Importancia × Incertidumbre. El cuadrante superior derecho se valida primero.</p>
+      </div>
+      <div class="phase-card converge">
+        <div class="phase-label">→</div>
+        <h4>Experimento</h4>
+        <div class="phase-q">¿Cuál es la prueba más barata?</div>
+        <p class="phase-desc">Experimento mínimo que reduce la incertidumbre del supuesto priorizado.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2 class="section-title">02 · Las 3 zonas del tablero</h2>
+    <p class="section-sub">El tablero de Plan de Experimentación está dividido en tres modos de pensamiento. Saber en qué zona estás cambia cómo debes operar: en Divergencia no filtres; en Convergencia elige con criterio explícito; en Síntesis conecta el backlog y verifica la cadena hipótesis → experimento → métrica → decisión.</p>
+
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="pill orange">◐ Diverge</div>
+        <h3>Explora sin filtrar</h3>
+        <p>Genera cantidad antes que calidad. El objetivo es no perderte experimentos por juzgar demasiado rápido.</p>
+        <ul style="font-size:13px;color:var(--charcoal);padding-left:18px;margin-top:10px;">
+          <li>Supuestos: lista todos sin editar ni priorizar</li>
+          <li>Hipótesis: captura todas las variantes posibles</li>
+          <li>Experimentos: cuantos más tipos, mejor punto de partida</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="pill plum">◑ Converge</div>
+        <h3>Elige con criterio</h3>
+        <p>No alcanza con "me parece más riesgoso". Debes justificar por qué este supuesto, este experimento, esta métrica.</p>
+        <ul style="font-size:13px;color:var(--charcoal);padding-left:18px;margin-top:10px;">
+          <li>Supuesto: prioriza con la matriz Importancia × Incertidumbre</li>
+          <li>Experimento: selecciona el de menor costo/mayor señal</li>
+          <li>Métrica: elige la más medible y accionable hoy</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="pill">● Sintetiza</div>
+        <h3>Conecta el backlog</h3>
+        <p>Verifica que cada experimento justifica una decisión. Si no puedes explicar la cadena completa en voz alta, hay un nodo roto.</p>
+        <ul style="font-size:13px;color:var(--charcoal);padding-left:18px;margin-top:10px;">
+          <li>Declaración de hipótesis (formato estructurado)</li>
+          <li>Experiment Backlog completo (columna de cierre)</li>
+          <li>¿Dónde entra la IA en cada experimento?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">03 · Flujo paso a paso del tablero</h2>
+    <p class="section-sub">De la idea al Experiment Backlog completo, con checkpoints de reflexión sobre IA en cada etapa.</p>
+
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div>
+        <h4>Idea de producto (dada)</h4>
+        <p>Parte de una idea o feature real, cercana a un caso de industria.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div>
+        <h4>Supuestos — Diverge</h4>
+        <p>Desglosa la idea en supuestos de deseabilidad, viabilidad y factibilidad. <span class="pill orange" style="margin-left:6px;">◈ ¿La IA valida este supuesto más rápido?</span></p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">03</div>
+      <div>
+        <h4>Supuesto crítico elegido → Hipótesis — Converge</h4>
+        <p>Prioriza con la matriz de riesgo y redacta la hipótesis en formato "Creemos que [acción] para [usuario] logrará [resultado]. Sabremos que es cierto cuando veamos [métrica]".</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">04</div>
+      <div>
+        <h4>Tipos de experimento — Diverge</h4>
+        <p>Genera 6+ experimentos posibles (entrevista, encuesta, Fake Door, Smoke Test, Concierge MVP, Wizard of Oz, prototipo, A/B). <span class="pill orange" style="margin-left:6px;">◈ Usa IA como herramienta aquí</span></p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">05</div>
+      <div>
+        <h4>Experimento seleccionado + métrica de éxito — Converge</h4>
+        <p>¿Requiere IA? Sí / No / Se acelera con IA. Define el criterio de éxito antes de ejecutar.</p>
+      </div>
+    </div>
+    <div class="step-item">
+      <div class="step-num">06</div>
+      <div>
+        <h4>Experiment Backlog completo + ¿dónde entra la IA? — Sintetiza</h4>
+        <p>Consolida todos los experimentos priorizados con su hipótesis, métrica y decisión esperada (Persevere / Pivot / Kill).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2 class="section-title">04 · Prompts para usar IA como herramienta</h2>
+    <p class="section-sub">Usar IA no es hacer trampa — es parte del contexto del módulo. Lo que se evalúa es tu criterio para filtrar, descartar y mejorar el output, no el output en sí. Úsalos en Claude, ChatGPT o cualquier LLM disponible. Haz clic en el bloque oscuro para seleccionar y copiar.</p>
+
+    <div class="prompt-label">Prompt 1 — Para generar experimentos</div>
+    <p style="font-size:13px;color:var(--slate);margin:0 0 6px;">Úsalo en el bloque de Experimentos. Reemplaza el texto entre corchetes antes de copiar.</p>
+    <div class="prompt-box">Tengo esta hipótesis de producto: [PEGA TU HIPÓTESIS AQUÍ].
+
+Dame 8 experimentos para validarla con usuarios reales, ordenados de MENOR a MAYOR costo de implementación.
+
+Para cada experimento indica:
+1. Qué supuesto específico valida
+2. Qué recursos / roles necesita
+3. En cuánto tiempo puede ejecutarse
+4. Cómo sabrías que funcionó (criterio de éxito medible)
+
+Después de obtener el output: marca los 3 más útiles, descarta los que no aplican a tu contexto, y anota POR QUÉ descartaste cada uno. Eso es lo que debes incluir en el backlog.</div>
+
+    <div class="prompt-label">Prompt 2 — Para evaluar el rol de IA en el experimento</div>
+    <p style="font-size:13px;color:var(--slate);margin:0 0 6px;">Úsalo en el bloque de Reflexión IA de cada experimento priorizado.</p>
+    <div class="prompt-box">Voy a ejecutar este experimento: [DESCRIBE EL EXPERIMENTO].
+
+Analízalo desde dos ángulos opuestos:
+
+ÁNGULO 1: ¿Cómo la IA podría acelerar o mejorar la ejecución de este experimento? Da 3 mecanismos concretos (generación de prototipo, síntesis de resultados, automatización de distribución, etc.)
+
+ÁNGULO 2: ¿Podría la IA sesgar o invalidar el resultado del experimento? Considera: usuarios sintéticos poco representativos, sesgo de confirmación en el análisis, datos generados que no reflejan comportamiento real.
+
+Sé directo y específico para el contexto de [NOMBRE DEL PRODUCTO / INDUSTRIA]. El objetivo no es concluir que la IA es buena o mala — es pensar en ambas direcciones.</div>
+
+    <div class="prompt-label">Prompt 3 — Para validar la coherencia del Experiment Backlog</div>
+    <p style="font-size:13px;color:var(--slate);margin:0 0 6px;">Úsalo al finalizar el tablero, antes de entregar. Es un auto-check de calidad.</p>
+    <div class="prompt-box">Voy a describir mi Experiment Backlog. Evalúa si cada nivel justifica lógicamente al siguiente y señala cualquier salto o inconsistencia:
+
+IDEA: [tu idea de producto]
+SUPUESTO CRÍTICO: [tu supuesto priorizado]
+HIPÓTESIS: [tu hipótesis en formato estructurado]
+EXPERIMENTO: [experimento elegido]
+MÉTRICA DE ÉXITO: [tu métrica]
+
+Preguntas que quiero que respondas:
+1. ¿El experimento realmente prueba la hipótesis, o prueba algo distinto?
+2. ¿La métrica de éxito es medible y accionable hoy?
+3. ¿Hay alguna suposición que no estoy declarando explícitamente?
+4. ¿Qué decisión (Persevere / Pivot / Kill) tomarías con cada resultado posible?
+
+Si el LLM encuentra inconsistencias que no habías visto, eso no es un error — es el valor del ejercicio. Ajusta tu backlog y documenta qué cambió y por qué.</div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">05 · Criterios de auto-evaluación</h2>
+    <p class="section-sub">Antes de entregar el tablero, respóndete estas preguntas. No son retóricas — si no puedes responderlas, el tablero está incompleto.</p>
+
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Criterio</th><th>Zona</th><th>Pregunta de verificación</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cobertura de divergencia</td><td>Diverge</td><td>¿Generaste al menos 8 supuestos y 6 tipos de experimento antes de converger? ¿Se nota que exploraste antes de elegir?</td></tr>
+          <tr><td>Criterio de priorización explícito</td><td>Converge</td><td>¿Puedes explicar en una oración por qué este supuesto es más crítico que los demás? ¿Usaste la matriz Importancia × Incertidumbre?</td></tr>
+          <tr><td>Hipótesis medible</td><td>Converge</td><td>¿Tu hipótesis sigue el formato "creemos que / lograremos / sabremos que es cierto cuando"? ¿Tiene una métrica clara?</td></tr>
+          <tr><td>Experimento de bajo costo</td><td>Converge</td><td>¿El experimento elegido es realmente el más barato que reduce la incertidumbre, o ya es una solución completa?</td></tr>
+          <tr><td>Coherencia del backlog</td><td>Sintetiza</td><td>¿Cada experimento resuelve un supuesto? ¿El supuesto viene de la idea priorizada? ¿La métrica conecta con la decisión final?</td></tr>
+          <tr><td>Reflexión IA integrada</td><td>◈ IA</td><td>¿Analizaste si la IA acelera O sesga el experimento? ¿Clasificaste cada experimento respecto a su relación con IA?</td></tr>
+          <tr><td>Uso crítico de IA como herramienta</td><td>◈ IA</td><td>Si usaste un prompt de IA, ¿documentaste qué descartaste y por qué? ¿El output de IA pasó por tu criterio?</td></tr>
+          <tr><td>Decisión Persevere / Pivot / Kill</td><td>Sintetiza</td><td>¿Definiste, para cada resultado posible del experimento, qué decisión tomarías? Menos ambigüedad es más rigor aquí.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Experimentación, IA y Validación de Producto</p>
+    <p>Diplomado de Producto · Plan de Experimentación · Guía de Navegación</p>
+    <p class="fq">"The Lean Startup" · Eric Ries · Build-Measure-Learn</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

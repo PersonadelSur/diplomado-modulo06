@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo Diverger y Converger con IA en Experimentación — Módulo 6</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Módulo 6 <span class="dim">| Experimentación, IA y Validación de Producto</span></a>
+    <div class="nav-links">
+      <a href="guia-workshop.html">Guía Workshop</a>
+      <a href="framework-experimentos.html">Framework de Experimentos</a>
+      <a href="stack-herramientas.html">Stack de Herramientas</a>
+      <a href="diverger-converger.html">Diverger · Converger</a>
+      <a href="capas-ia.html">Capas de IA Integradas</a>
+      <a href="recursos.html">Glosario y Recursos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Módulo 6 <span class="sep">·</span> Experimentación, IA y Validación de Producto</div>
+    <h1 class="display">Cómo Diverger y Converger<br>con Herramientas IA</h1>
+    <p class="lede">Ideas concretas para Product Owners y Product Managers en cada modo de pensamiento al diseñar experimentos</p>
+    <span class="piece-tag">Piezas 3 y 4 de 5</span>
+  </div>
+</header>
+
+<section class="block tight">
+  <div class="wrap">
+    <div class="grid cols-2">
+      <div class="card">
+        <div class="pill orange">◐ Divergir con IA</div>
+        <p style="margin-top:10px;">La IA amplifica tu rango de exploración. Úsala para generar más hipótesis y tipos de experimento de los que generarías solo, más rápido. <strong>No filtres en este modo</strong> — el objetivo es volumen y variedad.</p>
+      </div>
+      <div class="card">
+        <div class="pill plum">◑ Converger con IA</div>
+        <p style="margin-top:10px;">La IA estructura y reduce. Úsala para comparar, priorizar por riesgo, detectar inconsistencias y decidir persevere/pivot/kill. <strong>Siempre aplica tu criterio</strong> — el output de IA es punto de partida, no decisión final.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">◐ Modo Diverge — Explorar sin filtrar</h2>
+    <p class="section-sub">Ampliar el espacio de hipótesis y experimentos posibles. Usa la IA para generar más ángulos de los que tendrías solo. No evalúes aún.</p>
+
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div>
+        <h4>Lluvia de hipótesis de comportamiento</h4>
+        <p>Pide al chat que genere 10–15 hipótesis de por qué los usuarios no adoptan o abandonan una acción. Luego pide que las reformule desde perspectivas opuestas.</p>
+        <div class="pill-row"><span class="pill">Claude</span><span class="pill">ChatGPT</span><span class="pill">Gemini</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Soy PM de [producto]. Dame 15 hipótesis sobre por qué los usuarios no completan [acción]. Incluye razones emocionales, contextuales y técnicas. No te autocensures.</div>
+        <p class="step-note">El PM usa las hipótesis como guía de experimentación, no como conclusión.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div>
+        <h4>Generación de variantes de experimento</h4>
+        <p>Genera experimentos con niveles de esfuerzo muy distintos — desde una conversación manual hasta un prototipo funcional. Los extremos revelan opciones de bajo costo que no considerarías por defecto.</p>
+        <div class="pill-row"><span class="pill">Claude</span><span class="pill">ChatGPT</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Tengo esta hipótesis: [hipótesis]. Dame 10 formas distintas de probarla, desde la más manual y barata (conversación, Wizard of Oz) hasta la más automatizada (prototipo funcional, A/B test). Para cada una: costo, tiempo y qué tan fuerte es la evidencia que genera.</div>
+        <p class="step-note">Un experimento manual bien diseñado a veces da más señal que un prototipo caro mal enfocado.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">03</div>
+      <div>
+        <h4>Benchmark lateral de industrias</h4>
+        <p>Pide a la IA que busque cómo productos de industrias completamente distintas validaron el mismo tipo de supuesto. La analogía abre experimentos no obvios.</p>
+        <div class="pill-row"><span class="pill">Perplexity</span><span class="pill">Grok</span><span class="pill">Claude</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">¿Cómo validaron productos de industrias como la hotelería, la salud o el transporte público un supuesto similar a [tu supuesto]? Dame 5 ejemplos con el experimento específico que usaron.</div>
+        <p class="step-note">Perplexity cita fuentes reales — útil para fundamentar el diseño del experimento ante el equipo.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">04</div>
+      <div>
+        <h4>Exploración de usuarios sintéticos</h4>
+        <p>Genera personas sintéticas extremas para pilotear el experimento antes de lanzarlo a usuarios reales — no como reemplazo de la validación real.</p>
+        <div class="pill-row"><span class="pill">Claude</span><span class="pill">ChatGPT</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Crea 5 usuarios sintéticos con perfiles extremos para [producto]: el más experto, el más reticente, el que lo usaría de forma inesperada, el usuario en crisis, y el que abandonó. Simula cómo cada uno reaccionaría al experimento: [describe el experimento].</div>
+        <p class="step-note">Synthetic Users es un piloto de bajo costo, no un reemplazo de la evidencia real — documenta esa limitación.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">05</div>
+      <div>
+        <h4>Detección de señales sociales</h4>
+        <p>Usa Grok o Perplexity para explorar qué dicen usuarios reales sobre tu categoría de producto en foros, redes y reseñas. La queja pública es evidencia directa del problema a validar.</p>
+        <div class="pill-row"><span class="pill">Grok</span><span class="pill">Perplexity</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Busca quejas frecuentes de usuarios de [categoría de producto] en Reddit, Twitter y reseñas de App Store relacionadas con [tu supuesto]. Agrúpalas por tema. Dame al menos 10 patrones distintos.</div>
+        <p class="step-note">El dolor expresado públicamente es evidencia honesta — no está mediado por el sesgo del diseño del experimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2 class="section-title">◑ Modo Converge — Decidir con criterio</h2>
+    <p class="section-sub">Usa la IA para estructurar lo que exploró, priorizar por riesgo, y justificar la decisión de Persevere, Pivot o Kill. Tu criterio valida el output.</p>
+
+    <div class="step-item">
+      <div class="step-num">01</div>
+      <div>
+        <h4>Priorización de supuestos por riesgo</h4>
+        <p>Pega todos los supuestos generados en el modo divergente y pide que los ubique en la matriz Importancia × Incertidumbre.</p>
+        <div class="pill-row"><span class="pill">Claude</span><span class="pill">NotebookLM</span><span class="pill">ChatGPT</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Aquí están [N] supuestos de mi idea de producto: [lista]. Ubica cada uno en una matriz de Importancia (qué tan crítico es para el éxito) × Incertidumbre (qué tan poco sabemos). Dame los 3 que deberían validarse primero y por qué.</div>
+        <p class="step-note">El PM valida el ranking contra su intuición de contexto — la IA organiza, el PM decide.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">02</div>
+      <div>
+        <h4>Selección de experimento por costo/señal</h4>
+        <p>Pide que aplique un framework de esfuerzo vs. calidad de evidencia a tu lista de experimentos posibles. La IA hace el cálculo estructural — tú ajustas los pesos según el contexto real.</p>
+        <div class="pill-row"><span class="pill">Claude</span><span class="pill">ChatGPT</span><span class="pill">Gemini Gems</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Tengo estos [N] experimentos posibles para validar [hipótesis]: [lista]. Evalúa cada uno en Costo de implementación (bajo/medio/alto) y Fuerza de la evidencia que genera (débil/moderada/fuerte). Muéstrame el ranking y justifica el top 1.</div>
+        <p class="step-note">Nunca uses el ranking de IA como decisión final — úsalo para provocar debate en el equipo y explicitar suposiciones.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">03</div>
+      <div>
+        <h4>Validación de coherencia del Experiment Backlog</h4>
+        <p>Una vez construido tu backlog, pide a la IA que detecte inconsistencias lógicas entre hipótesis, experimento, métrica y decisión.</p>
+        <div class="pill-row"><span class="pill">Claude</span><span class="pill">ChatGPT</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Mi experimento: Hipótesis=[X], Experimento=[Y], Métrica de éxito=[Z], Decisión esperada=[Persevere/Pivot/Kill]. ¿El experimento realmente prueba la hipótesis? ¿La métrica es medible hoy? ¿Hay saltos o suposiciones no declaradas?</div>
+        <p class="step-note">Si la IA encuentra inconsistencias que tú no veías, eso es el valor — ajusta antes de ejecutar.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">04</div>
+      <div>
+        <h4>Definición de criterio de decisión</h4>
+        <p>Con la métrica ya definida, pide que genere 3 escenarios de resultado (por debajo, en línea, por encima del umbral) y qué decisión corresponde a cada uno.</p>
+        <div class="pill-row"><span class="pill">Claude</span><span class="pill">Gamma</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Mi métrica de éxito es [Y] con umbral [Z]. Dame 3 escenarios de resultado del experimento (por debajo, en línea, por encima del umbral) y qué decisión (Persevere / Pivot / Kill) tomaría el equipo en cada caso, con la justificación.</div>
+        <p class="step-note">Definir la decisión ANTES de ver el resultado evita racionalizar después con sesgo de confirmación.</p>
+      </div>
+    </div>
+
+    <div class="step-item">
+      <div class="step-num">05</div>
+      <div>
+        <h4>Síntesis ejecutiva de resultados</h4>
+        <p>Sube todos los resultados de experimentos ejecutados y pide un resumen ejecutivo de 1 página para el comité del taller final.</p>
+        <div class="pill-row"><span class="pill">NotebookLM</span><span class="pill">Claude</span><span class="pill">Gamma</span></div>
+        <div class="prompt-label">Prompt sugerido</div>
+        <div class="prompt-box">Sintetiza todos los resultados de experimentos adjuntos en un resumen ejecutivo de máximo 400 palabras: hipótesis validadas, hipótesis descartadas, 1 recomendación principal, y próximos experimentos sugeridos.</div>
+        <p class="step-note">NotebookLM con todos tus resultados cargados genera la síntesis más completa — el PM la valida y firma como suya.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Experimentación, IA y Validación de Producto</p>
+    <p>Módulo 6 de 7 · Piezas 3 y 4: Cómo Diverger y Converger con IA en Experimentación</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

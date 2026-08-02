@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack de Herramientas IA para Experimentación — Módulo 6</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Módulo 6 <span class="dim">| Experimentación, IA y Validación de Producto</span></a>
+    <div class="nav-links">
+      <a href="guia-workshop.html">Guía Workshop</a>
+      <a href="framework-experimentos.html">Framework de Experimentos</a>
+      <a href="stack-herramientas.html">Stack de Herramientas</a>
+      <a href="diverger-converger.html">Diverger · Converger</a>
+      <a href="capas-ia.html">Capas de IA Integradas</a>
+      <a href="recursos.html">Glosario y Recursos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Módulo 6 <span class="sep">·</span> Experimentación, IA y Validación de Producto</div>
+    <h1 class="display">Stack de Herramientas IA<br>para Experimentación</h1>
+    <p class="lede">Qué usar, cuándo y para qué. Referencia para Product Owners y Product Managers · Pirámide de Evidencia aplicada</p>
+    <span class="piece-tag">Pieza 3 de 5</span>
+  </div>
+</header>
+
+<section class="block tight">
+  <div class="wrap">
+    <div class="pill-row">
+      <span class="pill">● Diseño de Experimentos</span>
+      <span class="pill">● Validación de Problema/Solución</span>
+      <span class="pill">● Prototipado Rápido</span>
+      <span class="pill">● Analytics y Métricas</span>
+      <span class="pill">● Automatización y Pipelines</span>
+      <span class="pill">● Síntesis de Resultados</span>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr><th>Herramienta</th><th>Nivel Pirámide</th><th>Para qué usarla (como PM/PO)</th><th>Capacidad clave en Experimentación</th></tr>
+        </thead>
+        <tbody>
+          <tr class="group-row"><td colspan="4">● Diseño de Experimentos con Chats IA</td></tr>
+          <tr>
+            <td class="tool-name">Claude<span class="sub">Anthropic · Razonamiento largo, archivos, análisis</span></td>
+            <td>Problema · Usuario · Solución</td>
+            <td>
+              <ul>
+                <li>Generar hipótesis medibles a partir de un problema</li>
+                <li>Diseñar variantes de experimentos ordenadas por costo</li>
+                <li>Redactar el Experiment Backlog en formato estructurado</li>
+              </ul>
+            </td>
+            <td>Ideal para trabajar con contexto largo — sube tu Assumption Map y pide que priorice riesgos automáticamente</td>
+          </tr>
+          <tr>
+            <td class="tool-name">ChatGPT<span class="sub">OpenAI · GPT-4o, análisis, generación</span></td>
+            <td>Problema · Solución</td>
+            <td>
+              <ul>
+                <li>Generar hipótesis de comportamiento desde cero</li>
+                <li>Comparar tipos de experimento y su costo/beneficio</li>
+                <li>Redactar guiones de entrevista de validación</li>
+              </ul>
+            </td>
+            <td>GPT-4o con visión permite analizar mockups de un Fake Door Test antes de publicarlo</td>
+          </tr>
+          <tr>
+            <td class="tool-name">Gemini Gems<span class="sub">Google · Agentes especializados, integración Workspace</span></td>
+            <td>Modelo de negocio</td>
+            <td>
+              <ul>
+                <li>Analizar datos de pricing directamente en Sheets</li>
+                <li>Gem "evaluador de experimentos" que mantiene contexto del producto</li>
+              </ul>
+            </td>
+            <td>Los Gems permiten crear un "auditor de supuestos" que revisa cada experimento antes de ejecutarlo</td>
+          </tr>
+
+          <tr class="group-row"><td colspan="4">● Validación de Problema y Solución (bajo costo)</td></tr>
+          <tr>
+            <td class="tool-name">Carrd / Framer AI<span class="sub">Generación de landing pages con IA</span></td>
+            <td>Problema · Solución</td>
+            <td>
+              <ul>
+                <li>Fake Door Test: landing con CTA a una solución que no existe aún</li>
+                <li>Medir tasa de clic/registro como señal de demanda</li>
+              </ul>
+            </td>
+            <td>Levanta un Fake Door completo en menos de una hora sin depender de desarrollo</td>
+          </tr>
+          <tr>
+            <td class="tool-name">Typeform + IA<span class="sub">Encuestas y formularios inteligentes</span></td>
+            <td>Problema · Usuario</td>
+            <td>
+              <ul>
+                <li>Smoke Test: mide intención de compra antes de construir</li>
+                <li>Encuestas de validación de segmento</li>
+              </ul>
+            </td>
+            <td>Se conecta directo a pipelines de n8n/Make para procesar respuestas automáticamente</td>
+          </tr>
+          <tr>
+            <td class="tool-name">Calendly + WhatsApp/Manual<span class="sub">Concierge MVP y Wizard of Oz</span></td>
+            <td>Solución · Modelo de negocio</td>
+            <td>
+              <ul>
+                <li>Ofrecer el servicio manualmente detrás de una interfaz simple</li>
+                <li>Medir disposición a pagar antes de automatizar nada</li>
+              </ul>
+            </td>
+            <td>El PM "hace de robot" para simular una función de IA antes de construirla — Wizard of Oz clásico</td>
+          </tr>
+
+          <tr class="group-row"><td colspan="4">● Prototipado Rápido</td></tr>
+          <tr>
+            <td class="tool-name">Bolt<span class="sub">Generación de apps web desde texto · StackBlitz</span></td>
+            <td>Solución</td>
+            <td>
+              <ul>
+                <li>Prototipo funcional de una hipótesis de solución en horas</li>
+                <li>Generar UI para validar flows antes de involucrar al equipo de dev</li>
+              </ul>
+            </td>
+            <td>Permite crear un MVP clicable para probar con usuarios sin depender del sprint — acorta el ciclo de validación</td>
+          </tr>
+          <tr>
+            <td class="tool-name">Lovable<span class="sub">Generación de apps React desde conversación</span></td>
+            <td>Solución · Modelo de negocio</td>
+            <td>
+              <ul>
+                <li>Prototipos de alta fidelidad con lógica de negocio real</li>
+                <li>Iterar el MVP en conversación con el equipo</li>
+              </ul>
+            </td>
+            <td>Más potente que Bolt para experimentos que necesitan simular flujo de pago o autenticación</td>
+          </tr>
+
+          <tr class="group-row"><td colspan="4">● Analytics y Métricas de Experimento</td></tr>
+          <tr>
+            <td class="tool-name">Mixpanel IA<span class="sub">Product analytics con asistencia de IA</span></td>
+            <td>Crecimiento</td>
+            <td>
+              <ul>
+                <li>Definir y monitorear la métrica de éxito del experimento</li>
+                <li>Diseñar y leer resultados de A/B Testing</li>
+              </ul>
+            </td>
+            <td>El asistente de IA sugiere segmentos y explica caídas o subidas inesperadas en el funnel</td>
+          </tr>
+          <tr>
+            <td class="tool-name">Google Workspace Studio<span class="sub">IA integrada en Sheets, Docs, Slides</span></td>
+            <td>Modelo de negocio · Crecimiento</td>
+            <td>
+              <ul>
+                <li>Analizar datos de experimento directamente en Sheets con IA</li>
+                <li>Generar dashboards de resultados con asistencia de IA</li>
+              </ul>
+            </td>
+            <td>Si el equipo ya usa Google Workspace, es el punto de entrada más rápido a IA sin cambiar de herramientas</td>
+          </tr>
+
+          <tr class="group-row"><td colspan="4">● Automatización y Pipelines de Datos</td></tr>
+          <tr>
+            <td class="tool-name">n8n<span class="sub">Automatización open source · Flujos visuales con IA</span></td>
+            <td>Crecimiento</td>
+            <td>
+              <ul>
+                <li>Automatizar recopilación de resultados de experimentos</li>
+                <li>Flujo: formulario → n8n → Claude (síntesis) → Notion (Experiment Backlog)</li>
+              </ul>
+            </td>
+            <td>El PM orquesta el pipeline completo del experimento sin depender de engineering</td>
+          </tr>
+          <tr>
+            <td class="tool-name">Make<span class="sub">Automatización visual · Integración con 1000+ apps</span></td>
+            <td>Crecimiento</td>
+            <td>
+              <ul>
+                <li>Conectar resultados de Fake Door / Smoke Test con Notion o Sheets</li>
+                <li>Notificar al equipo cuando un experimento alcanza su criterio de éxito</li>
+              </ul>
+            </td>
+            <td>Más accesible que n8n para equipos sin perfil técnico — buena entrada a automatización de experimentación</td>
+          </tr>
+
+          <tr class="group-row"><td colspan="4">● Síntesis de Resultados</td></tr>
+          <tr>
+            <td class="tool-name">NotebookLM<span class="sub">Google · Base de conocimiento con tus propios archivos</span></td>
+            <td>Todos los niveles</td>
+            <td>
+              <ul>
+                <li>Consolidar resultados de todos los experimentos del backlog</li>
+                <li>Hacer preguntas cruzadas entre experimentos ejecutados en distintas semanas</li>
+              </ul>
+            </td>
+            <td>El PM lo usa como "memoria del Experiment Backlog" — consolida el aprendizaje acumulado del equipo</td>
+          </tr>
+          <tr>
+            <td class="tool-name">Gamma<span class="sub">Presentaciones generadas con IA desde texto o prompt</span></td>
+            <td>Síntesis final</td>
+            <td>
+              <ul>
+                <li>Convertir resultados de experimentos en un Informe de Insights</li>
+                <li>Preparar la recomendación ejecutiva del taller final</li>
+              </ul>
+            </td>
+            <td>El PM pega su síntesis de resultados y genera una presentación ejecutiva lista para el comité</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Experimentación, IA y Validación de Producto</p>
+    <p>Módulo 6 de 7 · Pieza 3: Stack de Herramientas IA para Experimentación</p>
+    <p class="fq">Herramientas verificadas a 2026 · Versiones y disponibilidad sujetas a cambio</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

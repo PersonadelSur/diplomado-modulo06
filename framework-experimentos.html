@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Framework de Experimentos + Herramientas IA — Módulo 6</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Módulo 6 <span class="dim">| Experimentación, IA y Validación de Producto</span></a>
+    <div class="nav-links">
+      <a href="guia-workshop.html">Guía Workshop</a>
+      <a href="framework-experimentos.html">Framework de Experimentos</a>
+      <a href="stack-herramientas.html">Stack de Herramientas</a>
+      <a href="diverger-converger.html">Diverger · Converger</a>
+      <a href="capas-ia.html">Capas de IA Integradas</a>
+      <a href="recursos.html">Glosario y Recursos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Módulo 6 <span class="sep">·</span> Experimentación, IA y Validación de Producto</div>
+    <h1 class="display">Pirámide de Evidencia<br>+ Herramientas IA</h1>
+    <p class="lede">Qué tipo de validación usar, en qué nivel de certeza, y con qué herramienta de IA</p>
+    <span class="piece-tag">Pieza 2 de 5</span>
+  </div>
+</header>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">Los 5 tipos de validación</h2>
+    <p class="section-sub">Cada tipo de validación reduce un riesgo distinto del producto. Ir de menor a mayor certeza — y de menor a mayor costo de implementación — es la lógica de la Pirámide de Evidencia.</p>
+
+    <div class="phase-flow">
+      <div class="phase-card diverge">
+        <div class="phase-label">◐ Nivel 1</div>
+        <h4>Problema</h4>
+        <div class="phase-q">¿El problema existe y es relevante?</div>
+        <div class="phase-tools">
+          <span class="tool-chip">Claude</span><span class="tool-chip">Perplexity</span><span class="tool-chip">Granola</span>
+        </div>
+        <p class="phase-desc">Entrevistas y research cualitativo para confirmar que el dolor es real antes de diseñar nada.</p>
+      </div>
+      <div class="phase-card converge">
+        <div class="phase-label">◑ Nivel 2</div>
+        <h4>Usuario</h4>
+        <div class="phase-q">¿Este segmento lo vive así?</div>
+        <div class="phase-tools">
+          <span class="tool-chip">NotebookLM</span><span class="tool-chip">Gemini Gems</span>
+        </div>
+        <p class="phase-desc">Segmentación y arquetipos para confirmar que hablamos del usuario correcto.</p>
+      </div>
+      <div class="phase-card diverge">
+        <div class="phase-label">◐ Nivel 3</div>
+        <h4>Solución</h4>
+        <div class="phase-q">¿Esta solución resuelve el problema?</div>
+        <div class="phase-tools">
+          <span class="tool-chip">Bolt</span><span class="tool-chip">Lovable</span><span class="tool-chip">Figma + IA</span>
+        </div>
+        <p class="phase-desc">Fake Door, Smoke Test, prototipos interactivos — la solución todavía no está construida de verdad.</p>
+      </div>
+      <div class="phase-card converge">
+        <div class="phase-label">◑ Nivel 4</div>
+        <h4>Modelo de negocio</h4>
+        <div class="phase-q">¿Es viable económicamente?</div>
+        <div class="phase-tools">
+          <span class="tool-chip">Claude</span><span class="tool-chip">Google Studio</span>
+        </div>
+        <p class="phase-desc">Concierge MVP y Wizard of Oz para probar disposición a pagar con costo operativo mínimo.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:4px;">
+      <div class="pill">◐◑ Nivel 5 · Crecimiento</div>
+      <h3 style="margin-top:10px;">¿Escala y se sostiene en el tiempo?</h3>
+      <div class="phase-tools">
+        <span class="tool-chip">Mixpanel IA</span><span class="tool-chip">n8n</span><span class="tool-chip">Make</span><span class="tool-chip">A/B Testing</span>
+      </div>
+      <p>A/B Testing y pipelines de datos conectados para validar retención, activación y expansión con evidencia cuantitativa continua.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <h2 class="section-title">Framework para diseñar experimentos</h2>
+    <p class="section-sub">Cuatro preguntas que todo experimento bien diseñado debe responder antes de ejecutarse.</p>
+    <div class="grid cols-4">
+      <div class="card">
+        <div class="card-index">01 · HIPÓTESIS</div>
+        <h3>¿Qué creemos?</h3>
+        <p>Creemos que [acción] para [usuario] logrará [resultado].</p>
+      </div>
+      <div class="card">
+        <div class="card-index">02 · MÉTODO</div>
+        <h3>¿Cómo lo probamos?</h3>
+        <p>El experimento más barato que genera evidencia suficiente — no el más completo.</p>
+      </div>
+      <div class="card">
+        <div class="card-index">03 · MÉTRICA</div>
+        <h3>¿Cómo sabremos?</h3>
+        <p>Criterio de éxito numérico definido ANTES de ejecutar, no después de ver los resultados.</p>
+      </div>
+      <div class="card">
+        <div class="card-index">04 · DECISIÓN</div>
+        <h3>¿Qué haremos?</h3>
+        <p>Persevere, Pivot o Kill definido para cada resultado posible del experimento.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <h2 class="section-title">Referencia complementaria — Ciclo de vida del experimento</h2>
+    <p class="section-sub">De la idea al aprendizaje incorporado al backlog, con la herramienta de IA dominante en cada etapa.</p>
+    <div class="grid cols-4">
+      <div class="card">
+        <div class="card-index">ETAPA 1</div>
+        <h3>Diseño</h3>
+        <div class="phase-tools"><span class="tool-chip">Claude</span><span class="tool-chip">ChatGPT</span></div>
+      </div>
+      <div class="card">
+        <div class="card-index">ETAPA 2</div>
+        <h3>Construcción</h3>
+        <div class="phase-tools"><span class="tool-chip">Bolt</span><span class="tool-chip">Lovable</span><span class="tool-chip">Canva</span></div>
+      </div>
+      <div class="card">
+        <div class="card-index">ETAPA 3</div>
+        <h3>Ejecución</h3>
+        <div class="phase-tools"><span class="tool-chip">n8n</span><span class="tool-chip">Make</span></div>
+      </div>
+      <div class="card">
+        <div class="card-index">ETAPA 4</div>
+        <h3>Análisis y decisión</h3>
+        <div class="phase-tools"><span class="tool-chip">Mixpanel IA</span><span class="tool-chip">Claude</span><span class="tool-chip">Google Studio</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Experimentación, IA y Validación de Producto</p>
+    <p>Módulo 6 de 7 · Diplomado de Producto · Pieza 2: Pirámide de Evidencia + IA</p>
+    <p class="fq">Ries (2011) · Build-Measure-Learn — Adaptado al contexto IA 2026</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
