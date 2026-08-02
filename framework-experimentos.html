@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Framework de Experimentos + Herramientas IA — Módulo 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,9 +28,9 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Módulo 6 <span class="sep">·</span> Experimentación, IA y Validación de Producto</div>
-    <h1 class="display">Pirámide de Evidencia<br>+ Herramientas IA</h1>
+    <h1 class="display">Pirámide de Evidencia<br><span class="accent-word">+ Herramientas IA</span></h1>
     <p class="lede">Qué tipo de validación usar, en qué nivel de certeza, y con qué herramienta de IA</p>
-    <span class="piece-tag">Pieza 2 de 5</span>
+    <span class="piece-badge">Pieza 2 de 5</span>
   </div>
 </header>
 
@@ -35,6 +38,11 @@
   <div class="wrap">
     <h2 class="section-title">Los 5 tipos de validación</h2>
     <p class="section-sub">Cada tipo de validación reduce un riesgo distinto del producto. Ir de menor a mayor certeza — y de menor a mayor costo de implementación — es la lógica de la Pirámide de Evidencia.</p>
+
+    <div class="legend-row">
+      <span class="legend-item diverge"><span class="legend-dot"></span>Niveles impares — validación exploratoria</span>
+      <span class="legend-item converge"><span class="legend-dot"></span>Niveles pares — validación de decisión</span>
+    </div>
 
     <div class="phase-flow">
       <div class="phase-card diverge">
@@ -76,7 +84,7 @@
     </div>
 
     <div class="card" style="margin-top:4px;">
-      <div class="pill">◐◑ Nivel 5 · Crecimiento</div>
+      <div class="pill red">◐◑ Nivel 5 · Crecimiento</div>
       <h3 style="margin-top:10px;">¿Escala y se sostiene en el tiempo?</h3>
       <div class="phase-tools">
         <span class="tool-chip">Mixpanel IA</span><span class="tool-chip">n8n</span><span class="tool-chip">Make</span><span class="tool-chip">A/B Testing</span>

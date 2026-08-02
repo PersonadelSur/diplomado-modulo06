@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Las Capas de la IA — Guía Integradora · Módulo 6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,9 +28,9 @@
 <header class="hero">
   <div class="wrap">
     <div class="eyebrow">Módulo 6 <span class="sep">·</span> Experimentación, IA y Validación de Producto</div>
-    <h1 class="display">Las Capas de la IA<br>Guía Integradora</h1>
+    <h1 class="display"><span class="accent-word">Las Capas de la IA</span><br>Guía Integradora</h1>
     <p class="lede">En el Módulo 2 conociste las 5 capas de forma intuitiva. Aquí las llevamos al rigor: cómo se combinan para construir pipelines de experimentación reales.</p>
-    <span class="piece-tag">Pieza 5 de 5</span>
+    <span class="piece-badge">Pieza 5 de 5</span>
   </div>
 </header>
 
@@ -43,7 +46,8 @@
         <div class="layer-sub">Aplicado a diseño de experimentos</div>
         <p>Un prompt vago genera experimentos genéricos. Un prompt con rol, restricción de costo y formato de salida genera un Experiment Backlog directamente accionable.</p>
         <div class="layer-example">"Dame ideas para validar esto" → genérico · "Eres PM de una fintech. Dame 8 experimentos para validar [hipótesis], ordenados de menor a mayor costo, con criterio de éxito medible para cada uno" → útil</div>
-        <div class="layer-apply"><strong>El PM lo aplica cuando…</strong> especifica el rol, el supuesto exacto a validar, el presupuesto disponible y el formato esperado antes de preguntar.</div>
+        <div class="layer-apply">El PM lo aplica cuando…</div>
+        <div class="layer-apply-text">Especifica el rol, el supuesto exacto a validar, el presupuesto disponible y el formato esperado antes de preguntar.</div>
         <div class="pill-row"><span class="pill">Claude</span><span class="pill">ChatGPT</span><span class="pill">Gemini</span></div>
       </div>
     </div>
@@ -55,7 +59,8 @@
         <div class="layer-sub">Aplicado a research previo y resultados históricos</div>
         <p>La IA no sabe qué experimentos ya corrió tu equipo si no se lo dices. Cargar el historial de experimentos anteriores evita repetir validaciones y permite detectar patrones entre sesiones.</p>
         <div class="layer-example">Subir el Informe de Insights del Módulo 3 + los experimentos previos → la IA prioriza supuestos ya en tensión con evidencia real, no genéricos de industria</div>
-        <div class="layer-apply"><strong>El PM lo aplica cuando…</strong> carga el Experiment Backlog acumulado, los insights de investigación y los datos de uso antes de diseñar el próximo experimento.</div>
+        <div class="layer-apply">El PM lo aplica cuando…</div>
+        <div class="layer-apply-text">Carga el Experiment Backlog acumulado, los insights de investigación y los datos de uso antes de diseñar el próximo experimento.</div>
         <div class="pill-row"><span class="pill">NotebookLM</span><span class="pill">Claude (archivos)</span><span class="pill">Gemini Gems</span></div>
       </div>
     </div>
@@ -67,7 +72,8 @@
         <div class="layer-sub">Aplicado a la audiencia de la decisión</div>
         <p>¿Vas a usar el resultado para decidir internamente en el squad, o para presentar al comité ejecutivo? El intent cambia qué tan riguroso debe ser el experimento y cómo se comunica el resultado.</p>
         <div class="layer-example">"Este experimento es para decidir si matamos la feature esta semana" → la IA prioriza velocidad de señal sobre completitud estadística</div>
-        <div class="layer-apply"><strong>El PM lo aplica cuando…</strong> declara explícitamente para qué decisión sirve el experimento antes de diseñarlo: "esto decide roadmap del próximo sprint", "esto va al comité ejecutivo".</div>
+        <div class="layer-apply">El PM lo aplica cuando…</div>
+        <div class="layer-apply-text">Declara explícitamente para qué decisión sirve el experimento antes de diseñarlo: "esto decide roadmap del próximo sprint", "esto va al comité ejecutivo".</div>
         <div class="pill-row"><span class="pill">Gamma</span><span class="pill">Claude</span><span class="pill">ChatGPT</span></div>
       </div>
     </div>
@@ -79,7 +85,8 @@
         <div class="layer-sub">Aplicado a criterios de éxito</div>
         <p>Definir el formato del criterio de éxito — umbral numérico, ventana de tiempo, segmento — elimina ambigüedad al momento de decidir Persevere/Pivot/Kill.</p>
         <div class="layer-example">"Responde con: Métrica | Umbral de éxito | Ventana de medición | Segmento objetivo. Máximo 4 filas." → criterio listo para monitorear en el dashboard</div>
-        <div class="layer-apply"><strong>El PM lo aplica cuando…</strong> siempre especifica unidad, umbral y ventana de tiempo antes de lanzar el experimento — ahorra discusiones post-resultado.</div>
+        <div class="layer-apply">El PM lo aplica cuando…</div>
+        <div class="layer-apply-text">Siempre especifica unidad, umbral y ventana de tiempo antes de lanzar el experimento — ahorra discusiones post-resultado.</div>
         <div class="pill-row"><span class="pill">Todos los chats IA</span><span class="pill">Mixpanel IA</span></div>
       </div>
     </div>
@@ -91,14 +98,15 @@
         <div class="layer-sub">Aplicado a automatización de experimentos</div>
         <p>El mayor salto de productividad ocurre cuando las herramientas se conectan entre sí: Typeform recolecta → n8n dispara → Claude sintetiza → Mixpanel mide → Notion documenta la decisión. El PM orquesta el flujo completo.</p>
         <div class="layer-example">Fake Door publicado → Typeform recolecta intención → n8n dispara alerta al alcanzar 100 respuestas → Claude sintetiza el resultado → Notion registra la decisión Persevere/Pivot/Kill</div>
-        <div class="layer-apply"><strong>El PM lo aplica cuando…</strong> diseña el pipeline de datos del experimento: define qué entra, qué herramienta procesa, qué sale y dónde se documenta la decisión.</div>
+        <div class="layer-apply">El PM lo aplica cuando…</div>
+        <div class="layer-apply-text">Diseña el pipeline de datos del experimento: define qué entra, qué herramienta procesa, qué sale y dónde se documenta la decisión.</div>
         <div class="pill-row"><span class="pill">n8n</span><span class="pill">Make</span><span class="pill">Google Studio</span><span class="pill">Zapier</span></div>
       </div>
     </div>
 
-    <div class="card" style="margin-top:24px;background:var(--plum);border:none;">
+    <div class="card" style="margin-top:24px;background:#0a0a0a;border:none;">
       <div style="color:#fff;">
-        <div class="pill orange" style="margin-bottom:12px;">⚡ Principio clave</div>
+        <div class="pill red" style="margin-bottom:12px;">⚡ Principio clave</div>
         <h3 style="color:#fff;">Un experimento es tan riguroso como el pipeline que lo sostiene</h3>
         <p style="color:rgba(255,255,255,0.75);">Un equipo que conecta las 5 capas obtiene un Experiment Backlog que aprende solo, semana a semana. El trabajo de diseñar el pipeline no es un extra — es parte del método científico aplicado a producto.</p>
       </div>
@@ -115,19 +123,19 @@
         <div class="card-index">OPEN SOURCE · TÉCNICO</div>
         <h3>n8n</h3>
         <p>Automatización de flujos visuales con nodos conectables. Integra cualquier herramienta con API — incluyendo Claude, Notion, Google Sheets, Slack.</p>
-        <p style="margin-top:10px;font-style:italic;color:var(--charcoal);">Flujo ejemplo: Typeform (intención) → n8n → Claude API (síntesis) → Notion (Experiment Backlog) → Slack (notifica decisión)</p>
+        <p style="margin-top:10px;font-style:italic;color:var(--ink);">Flujo ejemplo: Typeform (intención) → n8n → Claude API (síntesis) → Notion (Experiment Backlog) → Slack (notifica decisión)</p>
       </div>
       <div class="card">
         <div class="card-index">SAAS · NO TÉCNICO</div>
         <h3>Make</h3>
         <p>Similar a n8n pero con interfaz más visual y menor curva de aprendizaje. Ideal para squads sin perfil técnico que quieren automatizar sin instalar nada.</p>
-        <p style="margin-top:10px;font-style:italic;color:var(--charcoal);">Flujo ejemplo: Google Forms (Smoke Test) → Make → ChatGPT (extrae señal) → Sheets (registra) → Gmail (avisa al PM)</p>
+        <p style="margin-top:10px;font-style:italic;color:var(--ink);">Flujo ejemplo: Google Forms (Smoke Test) → Make → ChatGPT (extrae señal) → Sheets (registra) → Gmail (avisa al PM)</p>
       </div>
       <div class="card">
         <div class="card-index">GRATUITO · INTEGRADO</div>
         <h3>Google Workspace Studio</h3>
         <p>IA de Gemini integrada directamente en Sheets, Docs y Slides. El punto de entrada más rápido a automatización si el equipo ya usa Workspace.</p>
-        <p style="margin-top:10px;font-style:italic;color:var(--charcoal);">Flujo ejemplo: Resultados en Sheets → Gemini analiza → genera resumen en Docs → crea slide de recomendación en Slides</p>
+        <p style="margin-top:10px;font-style:italic;color:var(--ink);">Flujo ejemplo: Resultados en Sheets → Gemini analiza → genera resumen en Docs → crea slide de recomendación en Slides</p>
       </div>
     </div>
   </div>
