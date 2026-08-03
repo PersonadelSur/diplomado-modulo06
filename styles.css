@@ -61,12 +61,13 @@ img { max-width: 100%; display: block; }
 .nav-inner {
   max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 12px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 56px;
-  gap: 24px;
+  min-height: 56px;
+  gap: 16px 24px;
+  flex-wrap: wrap;
 }
 .nav-brand {
   color: #fff;
@@ -79,11 +80,10 @@ img { max-width: 100%; display: block; }
 .nav-brand .dim { color: rgba(255,255,255,0.5); font-weight: 400; }
 .nav-links {
   display: flex;
-  gap: 4px;
-  overflow-x: auto;
-  scrollbar-width: none;
+  flex-wrap: wrap;
+  gap: 4px 4px;
+  row-gap: 6px;
 }
-.nav-links::-webkit-scrollbar { display: none; }
 .nav-links a {
   color: rgba(255,255,255,0.55);
   font-size: 11px;
@@ -227,6 +227,14 @@ h2.section-title {
   letter-spacing: -0.01em;
 }
 .card p { font-size: 13px; color: var(--gray-600); margin: 0; }
+.card-example-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.card-example-link:hover { text-decoration: underline; }
 
 /* ---------- Pills / badges ---------- */
 .pill {
@@ -394,6 +402,8 @@ table.data-table tr.group-row td {
 table.data-table td ul { margin: 0; padding-left: 16px; }
 table.data-table td.tool-name { font-weight: 700; color: var(--ink); white-space: nowrap; }
 table.data-table td.tool-name .sub { display: block; font-weight: 400; color: var(--gray-500); font-size: 11px; }
+table.data-table td a { color: var(--accent); font-weight: 700; white-space: nowrap; }
+table.data-table td a:hover { text-decoration: underline; }
 
 /* ---------- Glossary ---------- */
 .glossary-toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
@@ -445,6 +455,7 @@ table.data-table td.tool-name .sub { display: block; font-weight: 400; color: va
 .glossary-item[data-cat="libros"] { border-left-color: #6a3fb5; }
 .glossary-item[data-cat="lecturas"] { border-left-color: #0a5fb0; }
 .glossary-item[data-cat="podcasts"] { border-left-color: #b5750a; }
+.glossary-item[data-cat="consejos"] { border-left-color: #c2185b; }
 .glossary-item.hidden { display: none; }
 .glossary-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .glossary-term { font-size: 15.5px; font-weight: 700; color: var(--ink); }
@@ -462,6 +473,31 @@ table.data-table td.tool-name .sub { display: block; font-weight: 400; color: va
 .glossary-body { font-size: 13px; color: var(--ink); margin-top: 8px; }
 .glossary-body strong { color: var(--ink); }
 .no-results { text-align: center; color: var(--gray-500); padding: 30px 0; display: none; }
+
+.glossary-h3 {
+  color: var(--ink);
+  font-size: 16px;
+  margin: 32px 0 14px;
+  font-weight: 700;
+  padding-left: 12px;
+  border-left: 3px solid var(--converge);
+  transition: opacity 0.15s, border-color 0.15s;
+}
+.glossary-h3.collapsed {
+  opacity: 0.4;
+  border-left-color: var(--border);
+  border-left-style: dashed;
+}
+.glossary-h3.collapsed::after {
+  content: "— sin resultados con este filtro";
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--gray-500);
+}
 
 /* ---------- Book / resource cards ---------- */
 .res-card {
