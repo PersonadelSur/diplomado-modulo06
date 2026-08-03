@@ -23,8 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('glossary-search');
   const chips = document.querySelectorAll('.filter-chip');
   const items = document.querySelectorAll('.glossary-item');
+  const sectionHeaders = document.querySelectorAll('.glossary-h3');
   const noResults = document.getElementById('no-results');
   let activeCat = 'todo';
+
+  function updateSectionHeaders() {
+    // Cada h3.glossary-h3 agrupa todo lo que viene después hasta el próximo h3.
+    // Si ningún .glossary-item del grupo quedó visible, marcamos el header
+    // como "colapsado" (señal visual) en vez de dejarlo suelto sin contexto.
+    sectionHeaders.forEach((h3) => {
+      let el = h3.nextElementSibling;
+      let anyVisible = false;
+      while (el && !el.classList.contains('glossary-h3')) {
+        if (el.classList.contains('glossary-item')) {
+          if (!el.classList.contains('hidden')) anyVisible = true;
+        } else if (el.querySelector && el.querySelector('.glossary-item:not(.hidden)')) {
+          anyVisible = true;
+        }
+        el = el.nextElementSibling;
+      }
+      h3.classList.toggle('collapsed', !anyVisible);
+    });
+  }
 
   function applyFilters() {
     const q = (searchInput?.value || '').toLowerCase().trim();
@@ -38,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('hidden', !show);
       if (show) visibleCount++;
     });
+    updateSectionHeaders();
     if (noResults) noResults.style.display = visibleCount === 0 ? 'block' : 'none';
   }
 
