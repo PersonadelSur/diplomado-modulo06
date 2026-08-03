@@ -227,6 +227,14 @@ h2.section-title {
   letter-spacing: -0.01em;
 }
 .card p { font-size: 13px; color: var(--gray-600); margin: 0; }
+.card-example-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+}
+.card-example-link:hover { text-decoration: underline; }
 
 /* ---------- Pills / badges ---------- */
 .pill {
@@ -394,6 +402,8 @@ table.data-table tr.group-row td {
 table.data-table td ul { margin: 0; padding-left: 16px; }
 table.data-table td.tool-name { font-weight: 700; color: var(--ink); white-space: nowrap; }
 table.data-table td.tool-name .sub { display: block; font-weight: 400; color: var(--gray-500); font-size: 11px; }
+table.data-table td a { color: var(--accent); font-weight: 700; white-space: nowrap; }
+table.data-table td a:hover { text-decoration: underline; }
 
 /* ---------- Glossary ---------- */
 .glossary-toolbar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
