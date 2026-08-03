@@ -445,6 +445,7 @@ table.data-table td.tool-name .sub { display: block; font-weight: 400; color: va
 .glossary-item[data-cat="libros"] { border-left-color: #6a3fb5; }
 .glossary-item[data-cat="lecturas"] { border-left-color: #0a5fb0; }
 .glossary-item[data-cat="podcasts"] { border-left-color: #b5750a; }
+.glossary-item[data-cat="consejos"] { border-left-color: #c2185b; }
 .glossary-item.hidden { display: none; }
 .glossary-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .glossary-term { font-size: 15.5px; font-weight: 700; color: var(--ink); }
